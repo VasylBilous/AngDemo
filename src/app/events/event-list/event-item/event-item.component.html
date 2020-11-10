@@ -1,0 +1,11 @@
+<div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">{{currentEvent.date}}
+    <i *ngIf="isSelected == true" (click)="setSelected()" class="fas fa-star selected"></i>
+    <i *ngIf="isSelected == false" (click)="setSelected()" class="fas fa-star"></i>
+  </div>
+  <div class="card-body text-dark">
+    <img class="card-img-top" [src]="currentEvent.imgUrl">
+    <h5 class="card-title">{{currentEvent.title}}</h5>
+    <p class="card-text">{{currentEvent.description}}</p>
+  </div>
+</div>
